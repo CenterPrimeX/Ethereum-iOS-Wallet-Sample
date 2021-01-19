@@ -1,0 +1,6 @@
+framework module Pods_EthereumIosSampleTests {
+  umbrella header "Pods-EthereumIosSampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
