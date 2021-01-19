@@ -16,7 +16,7 @@ class CheckERC20TokenBalanceVC: UIViewController {
     @IBOutlet weak var balanceTxtField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -46,14 +46,4 @@ class CheckERC20TokenBalanceVC: UIViewController {
     }
     
 }
-extension CheckERC20TokenBalanceVC {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CheckERC20TokenBalanceVC.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+

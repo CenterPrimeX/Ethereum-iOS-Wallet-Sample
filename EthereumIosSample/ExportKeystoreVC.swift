@@ -18,7 +18,7 @@ class ExportKeystoreVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -36,7 +36,7 @@ class ExportKeystoreVC: UIViewController {
                 if function successfully completes result can be caught in this block
              */
             keystoreUTextView.text = try eth.exportKeystore(walletAddress: walletTxtField.text!)
-            copyBtnOutlet.setTitle("Copy", for: .normal)
+            copyBtnOutlet.isHidden = false
         } catch {
             /**
                  if function fails error can be catched in this block
@@ -49,14 +49,4 @@ class ExportKeystoreVC: UIViewController {
         UIPasteboard.general.string = keystoreUTextView.text
     }
 }
-extension ExportKeystoreVC {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ExportKeystoreVC.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+

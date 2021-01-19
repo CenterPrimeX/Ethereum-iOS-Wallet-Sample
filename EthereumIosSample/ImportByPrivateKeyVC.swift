@@ -17,7 +17,7 @@ class ImportByPrivateKeyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -36,7 +36,7 @@ class ImportByPrivateKeyVC: UIViewController {
              */
             let address = try eth.importByPrivateKey(privateKey: privateKeyTxtField.text!)
             walletAddressLabel.text = address?.walletAddress
-            copyBtnOutlet.setTitle("Copy", for: .normal)
+            copyBtnOutlet.isHidden = false
         } catch {
             /**
                  if function fails error can be catched in this block
@@ -50,14 +50,4 @@ class ImportByPrivateKeyVC: UIViewController {
     }
     
 }
-extension ImportByPrivateKeyVC {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ImportByPrivateKeyVC.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+

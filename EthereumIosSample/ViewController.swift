@@ -41,6 +41,7 @@ class ViewController: UIViewController {
     @IBAction func sendTokenBtnAction(_ sender: Any) {
         moveToNextVC(storyBoardID: "SendERC20TokenVC")
     }
+    
     func moveToNextVC(storyBoardID: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: storyBoardID)
@@ -48,9 +49,11 @@ class ViewController: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
 }
-extension ViewController {
+
+//MARK: dismiss keyboard when tapped around for all ViewControllers
+extension UIViewController {
     func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }

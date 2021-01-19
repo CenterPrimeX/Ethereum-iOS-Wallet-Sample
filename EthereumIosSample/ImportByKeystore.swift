@@ -25,7 +25,7 @@ class ImportByKeystore: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -43,7 +43,7 @@ class ImportByKeystore: UIViewController {
              */
             let walletAddress = try eth.importByKeystore(keystore: keystoreTxtView.text!, password: passwordUiLabel.text!)
             walletAddressTxtField.text = walletAddress?.walletAddress
-            copyBtnOutlet.setTitle("Copy", for: .normal)
+            copyBtnOutlet.isHidden = false
         }catch{
             /**
                  if function fails error can be catched in this block
@@ -56,14 +56,4 @@ class ImportByKeystore: UIViewController {
         UIPasteboard.general.string = walletAddressTxtField.text
     }
 }
-extension ImportByKeystore {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ImportByKeystore.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+

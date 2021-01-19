@@ -45,12 +45,12 @@
                                     <action selector="exportBtnAction:" destination="7gq-66-BU5" eventType="touchUpInside" id="7EY-DQ-h03"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNm-YT-oZu">
-                                <rect key="frame" x="189" y="448" width="36" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0jO-8p-4Vm"/>
-                                    <constraint firstAttribute="width" constant="36" id="goG-hy-vTt"/>
-                                </constraints>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNm-YT-oZu">
+                                <rect key="frame" x="70" y="448" width="274" height="46.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="copyBtnAction:" destination="7gq-66-BU5" eventType="touchUpInside" id="rw7-Nl-6zp"/>
                                 </connections>
@@ -69,17 +69,18 @@
                         <viewLayoutGuide key="safeArea" id="Z32-1c-DLE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yNm-YT-oZu" firstAttribute="top" secondItem="7E9-c9-6cu" secondAttribute="bottom" constant="30" id="4Vs-zw-uDO"/>
+                            <constraint firstItem="Z32-1c-DLE" firstAttribute="trailing" secondItem="yNm-YT-oZu" secondAttribute="trailing" constant="70" id="0cM-mU-0KF"/>
                             <constraint firstItem="7E9-c9-6cu" firstAttribute="leading" secondItem="Z32-1c-DLE" secondAttribute="leading" constant="30" id="6NM-fx-UMC"/>
                             <constraint firstItem="TYw-cs-hU0" firstAttribute="leading" secondItem="Z32-1c-DLE" secondAttribute="leading" constant="30" id="HtO-z9-ntv"/>
+                            <constraint firstItem="yNm-YT-oZu" firstAttribute="top" secondItem="7E9-c9-6cu" secondAttribute="bottom" constant="30" id="Jbx-zU-RbW"/>
                             <constraint firstItem="eCV-Bp-8Sm" firstAttribute="top" secondItem="Z32-1c-DLE" secondAttribute="top" constant="50" id="Jta-rP-U4b"/>
                             <constraint firstItem="Z32-1c-DLE" firstAttribute="trailing" secondItem="7E9-c9-6cu" secondAttribute="trailing" constant="20" id="P19-nE-wIE"/>
                             <constraint firstItem="7E9-c9-6cu" firstAttribute="top" secondItem="eCV-Bp-8Sm" secondAttribute="bottom" constant="40" id="TiP-AT-PPo"/>
                             <constraint firstItem="Z32-1c-DLE" firstAttribute="trailing" secondItem="eCV-Bp-8Sm" secondAttribute="trailing" constant="30" id="X4J-bG-MXN"/>
+                            <constraint firstItem="yNm-YT-oZu" firstAttribute="leading" secondItem="Z32-1c-DLE" secondAttribute="leading" constant="70" id="Xrl-Fa-4Qi"/>
                             <constraint firstItem="Z32-1c-DLE" firstAttribute="trailing" secondItem="TYw-cs-hU0" secondAttribute="trailing" constant="30" id="boa-ZW-l02"/>
                             <constraint firstItem="eCV-Bp-8Sm" firstAttribute="leading" secondItem="Z32-1c-DLE" secondAttribute="leading" constant="30" id="dJg-Yh-5VD"/>
                             <constraint firstItem="TAR-mY-MhQ" firstAttribute="leading" secondItem="Z32-1c-DLE" secondAttribute="leading" constant="20" id="e4d-On-ydR"/>
-                            <constraint firstItem="yNm-YT-oZu" firstAttribute="centerX" secondItem="Hk1-15-YXB" secondAttribute="centerX" id="hoS-db-C1b"/>
                             <constraint firstItem="TAR-mY-MhQ" firstAttribute="top" secondItem="Z32-1c-DLE" secondAttribute="top" id="p81-76-A03"/>
                             <constraint firstItem="Z32-1c-DLE" firstAttribute="bottom" secondItem="TYw-cs-hU0" secondAttribute="bottom" constant="30" id="pN5-bm-gvP"/>
                         </constraints>
@@ -364,7 +365,7 @@
                                     <action selector="dismissBtnAction:" destination="zrL-P9-DtE" eventType="touchUpInside" id="DTv-BT-LCy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import by Private Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nA-QA-CaF">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import by Private Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nA-QA-CaF">
                                 <rect key="frame" x="125.5" y="104" width="163" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5RA-UH-foc"/>
@@ -384,7 +385,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27r-4Q-4dB">
                                 <rect key="frame" x="30" y="775.5" width="354" height="46.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="IMPORT WALLET" backgroundImage="button">
+                                <state key="normal" title="IMPORT WALLET ADDRESS" backgroundImage="button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -397,8 +398,12 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sC-NR-0cn">
-                                <rect key="frame" x="192" y="319" width="30" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sC-NR-0cn">
+                                <rect key="frame" x="70" y="319" width="274" height="46.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="copyBtnAction:" destination="zrL-P9-DtE" eventType="touchUpInside" id="F3P-I4-oTd"/>
                                 </connections>
@@ -411,6 +416,7 @@
                             <constraint firstItem="An1-Oz-qly" firstAttribute="bottom" secondItem="27r-4Q-4dB" secondAttribute="bottom" constant="40" id="17i-xr-CzC"/>
                             <constraint firstItem="An1-Oz-qly" firstAttribute="trailing" secondItem="27r-4Q-4dB" secondAttribute="trailing" constant="30" id="2V3-hI-h75"/>
                             <constraint firstItem="An1-Oz-qly" firstAttribute="trailing" secondItem="4Tf-F8-gsm" secondAttribute="trailing" constant="20" id="86O-hy-k7h"/>
+                            <constraint firstItem="An1-Oz-qly" firstAttribute="trailing" secondItem="1sC-NR-0cn" secondAttribute="trailing" constant="70" id="FhB-tT-4Pm"/>
                             <constraint firstItem="DqC-kw-k5K" firstAttribute="leading" secondItem="An1-Oz-qly" secondAttribute="leading" constant="30" id="JfS-1q-pv4"/>
                             <constraint firstItem="DqC-kw-k5K" firstAttribute="top" secondItem="8nA-QA-CaF" secondAttribute="bottom" constant="30" id="LMJ-xK-glL"/>
                             <constraint firstItem="8nA-QA-CaF" firstAttribute="centerX" secondItem="kX3-O4-cuo" secondAttribute="centerX" id="Ugd-rl-0Ke"/>
@@ -419,6 +425,7 @@
                             <constraint firstItem="4Tf-F8-gsm" firstAttribute="leading" secondItem="An1-Oz-qly" secondAttribute="leading" constant="30" id="cAe-Bx-qlg"/>
                             <constraint firstItem="An1-Oz-qly" firstAttribute="trailing" secondItem="DqC-kw-k5K" secondAttribute="trailing" constant="20" id="cO5-87-5TI"/>
                             <constraint firstItem="8nA-QA-CaF" firstAttribute="top" secondItem="An1-Oz-qly" secondAttribute="top" constant="60" id="gWN-1f-8Pu"/>
+                            <constraint firstItem="1sC-NR-0cn" firstAttribute="leading" secondItem="An1-Oz-qly" secondAttribute="leading" constant="70" id="gud-iM-W7r"/>
                             <constraint firstItem="4Tf-F8-gsm" firstAttribute="top" secondItem="DqC-kw-k5K" secondAttribute="bottom" constant="80" id="jBY-ij-uzj"/>
                             <constraint firstItem="FhA-qp-NtY" firstAttribute="leading" secondItem="An1-Oz-qly" secondAttribute="leading" constant="20" id="lmx-PR-dUn"/>
                             <constraint firstItem="1sC-NR-0cn" firstAttribute="centerX" secondItem="kX3-O4-cuo" secondAttribute="centerX" id="rUU-g4-Usb"/>
@@ -662,8 +669,12 @@
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-LH-bHs">
-                                <rect key="frame" x="192" y="611" width="30" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-LH-bHs">
+                                <rect key="frame" x="70" y="611" width="274" height="46.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="copyBtnAction:" destination="2Ad-nI-pop" eventType="touchUpInside" id="t2g-E8-wJm"/>
                                 </connections>
@@ -682,6 +693,8 @@
                             <constraint firstItem="ANU-C0-Tky" firstAttribute="top" secondItem="pwZ-ZH-ind" secondAttribute="bottom" constant="30" id="LKo-kb-B36"/>
                             <constraint firstItem="1UA-v4-6Pv" firstAttribute="top" secondItem="9Ge-rl-mTs" secondAttribute="top" constant="20" id="PME-8u-Ves"/>
                             <constraint firstItem="9Ge-rl-mTs" firstAttribute="trailing" secondItem="G24-rb-DJl" secondAttribute="trailing" constant="20" id="QST-PZ-1Ah"/>
+                            <constraint firstItem="NaN-LH-bHs" firstAttribute="leading" secondItem="9Ge-rl-mTs" secondAttribute="leading" constant="70" id="ReZ-vI-GhC"/>
+                            <constraint firstItem="9Ge-rl-mTs" firstAttribute="trailing" secondItem="NaN-LH-bHs" secondAttribute="trailing" constant="70" id="SBp-Ve-gJG"/>
                             <constraint firstItem="6vQ-c8-GQq" firstAttribute="leading" secondItem="9Ge-rl-mTs" secondAttribute="leading" constant="30" id="Sea-9E-kLt"/>
                             <constraint firstItem="9Ge-rl-mTs" firstAttribute="trailing" secondItem="pwZ-ZH-ind" secondAttribute="trailing" constant="20" id="Tw8-L2-Pf7"/>
                             <constraint firstItem="pwZ-ZH-ind" firstAttribute="leading" secondItem="9Ge-rl-mTs" secondAttribute="leading" constant="30" id="U5e-ln-60Y"/>
@@ -754,7 +767,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qc-Bd-Rmz">
                                         <rect key="frame" x="0.0" y="188.5" width="354" height="47.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Import By Keystore" backgroundImage="btn">
+                                        <state key="normal" title="Import Wallet By Keystore" backgroundImage="btn">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -765,7 +778,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHn-IU-v9m">
                                         <rect key="frame" x="0.0" y="251" width="354" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Import By Private Key" backgroundImage="btn">
+                                        <state key="normal" title="Import Wallet By Private Key" backgroundImage="btn">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -776,7 +789,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-J8-QKQ">
                                         <rect key="frame" x="0.0" y="314" width="354" height="47.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Check balance" backgroundImage="btn">
+                                        <state key="normal" title="Check Balance" backgroundImage="btn">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -798,7 +811,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLC-tJ-eZQ">
                                         <rect key="frame" x="0.0" y="439.5" width="354" height="47.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Sent ethereum" backgroundImage="btn">
+                                        <state key="normal" title="Send Ethereum" backgroundImage="btn">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -809,7 +822,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmv-Ty-8uB">
                                         <rect key="frame" x="0.0" y="502" width="354" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Sent ERC20 Token" backgroundImage="btn">
+                                        <state key="normal" title="Send ERC20 Token" backgroundImage="btn">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -824,20 +837,20 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO0-SQ-Spw">
-                                <rect key="frame" x="30" y="64" width="100" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="30" y="64" width="111" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ethereum SDK Sample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2S9-fl-L3n">
-                                <rect key="frame" x="30" y="95.5" width="181.5" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="30" y="98" width="203.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" red="0.16297620530000001" green="0.045083992179999997" blue="0.58718436959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pi-eZ-bZ9">
-                                <rect key="frame" x="30" y="127" width="49.5" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="30" y="132" width="56" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -921,32 +934,36 @@
                                     <constraint firstAttribute="height" constant="208" id="RHP-Ju-Kun"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-0O-dqM">
-                                <rect key="frame" x="30" y="342" width="354" height="162"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="g1h-0O-dqM">
+                                <rect key="frame" x="30" y="342" width="354" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-9i-iCJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cx-fO-VZR">
-                                        <rect key="frame" x="0.0" y="66" width="354" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="43" width="354" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" systemColor="systemGreenColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0q-jj-egX">
-                                        <rect key="frame" x="0.0" y="132" width="354" height="30"/>
-                                        <connections>
-                                            <action selector="copyBtnAction:" destination="HfZ-zS-cvL" eventType="touchUpInside" id="i6t-Ij-bnx"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="lcA-4q-lhX"/>
+                                    <constraint firstAttribute="height" constant="70" id="lcA-4q-lhX"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0q-jj-egX">
+                                <rect key="frame" x="70" y="442" width="274" height="46.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyBtnAction:" destination="HfZ-zS-cvL" eventType="touchUpInside" id="i6t-Ij-bnx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z6X-RQ-b2n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -958,10 +975,13 @@
                             <constraint firstItem="1ad-Db-qOV" firstAttribute="leading" secondItem="z6X-RQ-b2n" secondAttribute="leading" constant="30" id="M5T-1S-fmF"/>
                             <constraint firstItem="g1h-0O-dqM" firstAttribute="leading" secondItem="z6X-RQ-b2n" secondAttribute="leading" constant="30" id="MWS-Ae-Yk9"/>
                             <constraint firstItem="z6X-RQ-b2n" firstAttribute="trailing" secondItem="g1h-0O-dqM" secondAttribute="trailing" constant="30" id="Rd8-zA-AQF"/>
+                            <constraint firstItem="I0q-jj-egX" firstAttribute="top" secondItem="g1h-0O-dqM" secondAttribute="bottom" constant="30" id="RyL-if-yJQ"/>
                             <constraint firstItem="g1h-0O-dqM" firstAttribute="top" secondItem="vJC-BC-hAA" secondAttribute="bottom" constant="30" id="dsY-N9-RY4"/>
                             <constraint firstItem="7Ym-SS-X6h" firstAttribute="top" secondItem="z6X-RQ-b2n" secondAttribute="top" id="fq3-mH-7YA"/>
+                            <constraint firstItem="I0q-jj-egX" firstAttribute="leading" secondItem="z6X-RQ-b2n" secondAttribute="leading" constant="70" id="lxx-E9-B6e"/>
                             <constraint firstItem="7Ym-SS-X6h" firstAttribute="leading" secondItem="z6X-RQ-b2n" secondAttribute="leading" constant="20" id="mqv-lU-zxs"/>
                             <constraint firstItem="vJC-BC-hAA" firstAttribute="top" secondItem="z6X-RQ-b2n" secondAttribute="top" constant="60" id="tnK-sA-6Ll"/>
+                            <constraint firstItem="z6X-RQ-b2n" firstAttribute="trailing" secondItem="I0q-jj-egX" secondAttribute="trailing" constant="70" id="uFM-Yx-EHF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1084,7 +1104,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="xGv-W4-zQp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="epy-Mf-jDh">
@@ -1095,11 +1115,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-Lg-9Kd">
-                                <rect key="frame" x="192" y="253" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="brV-xc-Tp8"/>
-                                </constraints>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-Lg-9Kd">
+                                <rect key="frame" x="80" y="253" width="254" height="46.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Copy" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="copyBtnAction:" destination="IaC-A2-7gr" eventType="touchUpInside" id="9hU-VM-9QF"/>
                                 </connections>
@@ -1131,7 +1152,6 @@
                             <constraint firstItem="cKP-KM-Ap3" firstAttribute="trailing" secondItem="epy-Mf-jDh" secondAttribute="trailing" constant="20" id="7ov-Rc-epP"/>
                             <constraint firstItem="cKP-KM-Ap3" firstAttribute="bottom" secondItem="MF2-UL-S0i" secondAttribute="bottom" constant="40" id="Cdm-35-5Bz"/>
                             <constraint firstItem="epy-Mf-jDh" firstAttribute="leading" secondItem="cKP-KM-Ap3" secondAttribute="leading" constant="30" id="IX5-LF-KIa"/>
-                            <constraint firstItem="uNr-Lg-9Kd" firstAttribute="top" secondItem="3Nx-mf-etO" secondAttribute="bottom" constant="20" id="Kfk-dL-Mik"/>
                             <constraint firstItem="cKP-KM-Ap3" firstAttribute="trailing" secondItem="3Nx-mf-etO" secondAttribute="trailing" constant="20" id="Qsh-61-g8R"/>
                             <constraint firstItem="3Nx-mf-etO" firstAttribute="leading" secondItem="cKP-KM-Ap3" secondAttribute="leading" constant="30" id="R9d-BX-xyc"/>
                             <constraint firstItem="cKP-KM-Ap3" firstAttribute="trailing" secondItem="MF2-UL-S0i" secondAttribute="trailing" constant="30" id="T7w-NX-DSw"/>
@@ -1139,10 +1159,12 @@
                             <constraint firstItem="xQX-S7-WSJ" firstAttribute="top" secondItem="2Qb-UF-fDd" secondAttribute="bottom" constant="30" id="Ud5-Bi-18f"/>
                             <constraint firstItem="cKP-KM-Ap3" firstAttribute="trailing" secondItem="xQX-S7-WSJ" secondAttribute="trailing" constant="20" id="XOC-Uc-qgI"/>
                             <constraint firstItem="3Nx-mf-etO" firstAttribute="top" secondItem="epy-Mf-jDh" secondAttribute="bottom" constant="20" id="XaT-si-hHN"/>
+                            <constraint firstItem="uNr-Lg-9Kd" firstAttribute="top" secondItem="3Nx-mf-etO" secondAttribute="bottom" constant="20" id="YBK-8E-CFg"/>
+                            <constraint firstItem="cKP-KM-Ap3" firstAttribute="trailing" secondItem="uNr-Lg-9Kd" secondAttribute="trailing" constant="80" id="eIw-oo-HXA"/>
                             <constraint firstItem="xQX-S7-WSJ" firstAttribute="leading" secondItem="cKP-KM-Ap3" secondAttribute="leading" constant="30" id="ird-I7-JuK"/>
+                            <constraint firstItem="uNr-Lg-9Kd" firstAttribute="leading" secondItem="cKP-KM-Ap3" secondAttribute="leading" constant="80" id="nXB-8f-ZDJ"/>
                             <constraint firstItem="2Qb-UF-fDd" firstAttribute="top" secondItem="cKP-KM-Ap3" secondAttribute="top" id="rQU-Rd-vqV"/>
                             <constraint firstItem="epy-Mf-jDh" firstAttribute="top" secondItem="xQX-S7-WSJ" secondAttribute="bottom" constant="20" id="tcz-tG-ehN"/>
-                            <constraint firstItem="uNr-Lg-9Kd" firstAttribute="centerX" secondItem="nuC-pV-uTv" secondAttribute="centerX" id="xmd-yc-AMF"/>
                         </constraints>
                     </view>
                     <connections>

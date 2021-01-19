@@ -16,9 +16,10 @@ class CreateWalletVC: UIViewController {
     @IBOutlet weak var yourWalletLblOutlet: UILabel!
     @IBOutlet weak var walletAddressLblOutlet: UILabel!
     @IBOutlet weak var copyBtnOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
@@ -46,7 +47,8 @@ class CreateWalletVC: UIViewController {
                 let walletAddress = try eth.createWallet(walletPassword: password!)
                 walletAddressLblOutlet.text = walletAddress?.walletAddress
                 yourWalletLblOutlet.text = "Your wallet address!"
-                copyBtnOutlet.setTitle("Copy address", for: .normal)
+                copyBtnOutlet.isHidden = false
+                
             } catch{
                 /**
                      if function fails error can be catched in this block
@@ -58,17 +60,6 @@ class CreateWalletVC: UIViewController {
     
     @IBAction func copyBtnAction(_ sender: Any) {
         UIPasteboard.general.string = walletAddressLblOutlet.text
-    }
-}
-extension CreateWalletVC {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CreateWalletVC.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
 
