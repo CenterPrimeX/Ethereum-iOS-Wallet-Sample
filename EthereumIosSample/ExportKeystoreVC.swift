@@ -13,6 +13,9 @@ class ExportKeystoreVC: UIViewController {
      */
     @IBOutlet weak var walletTxtField: UITextField!
     @IBOutlet weak var keystoreUTextView: UITextView!
+    @IBOutlet weak var copyBtnOutlet: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -33,6 +36,7 @@ class ExportKeystoreVC: UIViewController {
                 if function successfully completes result can be caught in this block
              */
             keystoreUTextView.text = try eth.exportKeystore(walletAddress: walletTxtField.text!)
+            copyBtnOutlet.setTitle("Copy", for: .normal)
         } catch {
             /**
                  if function fails error can be catched in this block
