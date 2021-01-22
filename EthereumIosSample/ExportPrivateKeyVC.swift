@@ -35,11 +35,20 @@ class ExportPrivateKeyVC: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager.init(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
+        /**
+         * Using this exportPrivateKey function user can export walletAddresses privateKey.
+         *
+         * @param walletAddress
+         * @param password - password of provided wallet address
+         *
+         * @return privateKey
+         */
         do{
             /**
                 if function successfully completes result can be caught in this block
              */
-            let privateKey = try eth.exportPrivateKey(walletAddress: walletAddressTxtField.text!, password: passwordTxtField.text!)
+            let privateKey = try eth.exportPrivateKey(walletAddress: walletAddressTxtField.text!,
+                                                      password: passwordTxtField.text!)
             privateKeyLbl.text = privateKey.toHexString()
             copyBtnOutlet.isHidden = false
         } catch {

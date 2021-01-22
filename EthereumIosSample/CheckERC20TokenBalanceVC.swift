@@ -31,11 +31,21 @@ class CheckERC20TokenBalanceVC: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
+        /**
+         * Using this getERC20TokenBalance function you can check balance of provided walletAddress with smart contract.
+         *
+         * @param walletAddress - which user want to check it's balance
+         * @param password - password of provided password
+         * @param contractAddress - contract address of token
+         *
+         * @return balance
+         */
         do {
             /**
                 if function successfully completes result can be caught in this block
              */
-            let balance = try eth.getERC20TokenBalance(tokenContractAddress: contract, walletAddress: walletAddress)
+            let balance = try eth.getERC20TokenBalance(tokenContractAddress: contract,
+                                                       walletAddress: walletAddress)
             balanceTxtField.text = balance
         }catch {
             /**

@@ -37,6 +37,14 @@ class ImportByKeystore: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
+        /**
+        * Using this importByKeystore function user can import his wallet from keystore.
+        *
+        * @param keystore - keystore JSON file
+        * @param password - password of provided keystore
+        *
+        * @return walletAddress
+        */
         do {
             /**
                 if function successfully completes result can be caught in this block

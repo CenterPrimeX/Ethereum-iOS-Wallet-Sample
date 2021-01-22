@@ -26,19 +26,34 @@ class SendEthereumVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func sentEthBtnAction(_ sender: Any) {
         /**
             @param infura - Initialize infura
          */
         let eth = EthWalletManager.init(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
-        
+        /**
+         * Using this sendEther function you can send ETH from walletAddress to another walletAddress.
+         *
+         * @param senderWalletAddress - must be provided sender's wallet address
+         * @param password - User must enter password of wallet address
+         * @param gasPrice - gas price: 30
+         * @param gasLimit - gas limit atleast 21000 or more
+         * @param bnbAmount - amount of ETH which user want to send
+         * @param receiverWalletAddress - wallet address which is user want to send ETH
+         *
+         * @return if sending completes successfully the function returns transactionHash or returns error name
+         */
         do {
             /**
                 if function successfully completes result can be caught in this block
              */
             let gas = BigUInt(gasLimitTxtFiled.text!)
-            let tx = try eth.sendEther(walletAddress: senderWalletAddressTxtxField.text!, password: passwordTxtField.text!, receiverAddress: receiverWalletAddressTxtField.text!, etherAmount: ethAmuntTxtField.text!, gasPrice: BigUInt("50"), gasLimit: gas!)
+            let tx = try eth.sendEther(walletAddress: senderWalletAddressTxtxField.text!,
+                                       password: passwordTxtField.text!,
+                                       receiverAddress: receiverWalletAddressTxtField.text!,
+                                       etherAmount: ethAmuntTxtField.text!,
+                                       gasPrice: BigUInt("50"),
+                                       gasLimit: gas!)
             txIdLabel.text = tx
             
         } catch {

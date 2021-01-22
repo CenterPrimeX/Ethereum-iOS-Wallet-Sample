@@ -30,6 +30,13 @@ class ImportByPrivateKeyVC: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager.init(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
+        /**
+         * Using this importFromPrivateKey function user can import his wallet from its private key.
+         *
+         * @param privateKey - private key of wallet address
+         *
+         * @return walletAddress
+         */
         do {
             /**
                 if function successfully completes result can be caught in this block

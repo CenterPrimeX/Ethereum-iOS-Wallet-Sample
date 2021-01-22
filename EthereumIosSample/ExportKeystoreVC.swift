@@ -31,6 +31,13 @@ class ExportKeystoreVC: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager.init(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
+        /**
+         * Using this getKeyStore function user can get keyStore of provided walletAddress.
+         *
+         * @param WalletAddress - wallet address which user want to get key store
+         *
+         * @return if the function is completed successfully returns keyStore JSON file or error name
+         */
         do{
             /**
                 if function successfully completes result can be caught in this block

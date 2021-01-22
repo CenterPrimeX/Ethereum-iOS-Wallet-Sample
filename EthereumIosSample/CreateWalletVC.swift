@@ -32,9 +32,12 @@ class CreateWalletVC: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager.init(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
-        
         /**
-             @param password - must be provided password to wallet address
+         * Using this createWallet function user can create a wallet.
+         *
+         * @param password - must be provided password to wallet address
+         *
+         * @return walletAddress
          */
         let password = pwdTextFieldOutlet.text
         let confirmPwd = confirmPwdTxtFieldOutlet.text

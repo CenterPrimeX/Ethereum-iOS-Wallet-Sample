@@ -29,6 +29,13 @@ class CheckBalanceVC: UIViewController {
             @param infura - Initialize infura
          */
         let eth = EthWalletManager(infuraUrl: "https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689")
+        /**
+         * Using this getEtherBalance function you can check balance of provided walletAddress.
+         *
+         * @param walletAddress - which user want to check it's balance
+         *
+         * @return if the function completes successfully returns balance of provided wallet address or returns error name
+         */
         do {
             /**
                 if function successfully completes result can be caught in this block
