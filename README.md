@@ -23,31 +23,31 @@ This app demonstrates wallet features which contains examples of:
 ### 2. Screenshots
 
 #### Main Screen
-<img src="https://centerprime.technology/images/github/ethereum ios/main_screen.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/main_screen.png">
 
 #### Create Wallet 
-<img src="https://centerprime.technology/images/github/ethereum ios/create_wallet.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/create_wallet.png">
 
 #### Export Keystore
-<img src="https://centerprime.technology/images/github/ethereum ios/export_keystore.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/export_keystore.png">
 
 #### Export Private Key
-<img src="https://centerprime.technology/images/github/ethereum ios/export_private_key.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/export_private_key.png">
 
 #### Import Wallet By Keystore
-<img src="https://centerprime.technology/images/github/ethereum ios/import_wallet_by_keystore.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/import_wallet_by_keystore.png">
 
 #### Import Wallet By Private Key
-<img src="https://centerprime.technology/images/github/ethereum ios/import_wallet_by_private_key.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/import_wallet_by_private_key.png">
 
 #### Ethereum Balance
-<img src="https://centerprime.technology/images/github/ethereum ios/check_balance.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/check_balance.png">
 
 #### ERC20 Token Balance
-<img src="https://centerprime.technology/images/github/ethereum ios/check_token_balance.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/check_token_balance.png">
 
 #### Send Ether
-<img src="https://centerprime.technology/images/github/ethereum ios/send_ether.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/send_ether.png">
 
 #### Send ERC20 Token
-<img src="https://centerprime.technology/images/github/ethereum ios/send_erc20_token.png">
+<img src="https://centerprime.technology/static/images/github/ethereum ios/send_erc20_token.png">
